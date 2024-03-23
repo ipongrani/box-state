@@ -155,16 +155,11 @@ export default function boxState (context) {
                 actions: {},
             };
             
-            // guards
-            const noContext = !context;
-            const isNotObject = typeof context !== 'object';
-            const isEmptyContext = !Object.keys(context).length;
-            if (isNotObject || isEmptyContext || noContext) {
-                throw new Error('Please provide valid initial values.');
-            };
 
-            // set context to state
-            appState.states = context;
+            if (context) {
+                // set context to state
+                appState.states = context;
+            }
 
             
             // functions to exported for user
