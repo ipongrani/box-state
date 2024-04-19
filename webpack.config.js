@@ -6,7 +6,7 @@ const TerserPlugin = require('terser-webpack-plugin');
 const environment = {
   dev: {
     output: {
-      path: path.resolve(__dirname, '../../dist/dev-boxState'), // Output directory
+      path: path.resolve(__dirname, '../dist'), // Output directory
       filename: 'boxState.js' // Output filename
     },
     mode: 'development',
@@ -15,7 +15,7 @@ const environment = {
   },
   prod: {
     output: {
-      path: path.resolve(__dirname, '../../dist/boxState'), // Output directory
+      path: path.resolve(__dirname, '../dist'), // Output directory
       filename: 'boxState.js' // Output filename
     },
     mode: 'production',
@@ -24,7 +24,7 @@ const environment = {
   }
 }
 
-const useEnv = environment.dev;
+const useEnv = environment.prod;
 
 module.exports = {
   entry: './index.js', // Entry point
