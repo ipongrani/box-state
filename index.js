@@ -50,6 +50,11 @@ export default function boxState (context) {
                 states: {},
                 actions: {},
             };
+
+
+            if (!context) {
+                throw new Error('Missing Context.');
+            }
             
 
             if (context) {
