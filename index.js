@@ -53,7 +53,7 @@ export default function boxState (context) {
 
 
             if (!context) {
-                throw new Error('Missing Context.');
+                throw new Error('Missing "Context" required for box state.');
             }
             
 
