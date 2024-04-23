@@ -52,11 +52,6 @@ export default function boxState (context) {
             };
 
 
-            if (!context) {
-                throw new Error('Missing "Context" required for box state.');
-            }
-            
-
             if (context) {
                 // set context to state
                 appState.states = context;
