@@ -60,10 +60,6 @@ export default function boxState (context) {
             
             // functions to exported for user
             function setState(stateName, value) {
-                const notInStates = !appState.states[stateName];
-                if (notInStates) {
-                    throw new Error(`Property "${stateName}" not in states.`);
-                }
                 return appState.states[stateName] = value;
             }
 
